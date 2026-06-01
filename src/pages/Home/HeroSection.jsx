@@ -16,9 +16,9 @@ const HeroSection = () => {
 
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-                        {/* Left Content */}
+                        {/* =======================Left Texts================================= */}
                         <motion.div
-                            initial={{ opacity: 0, x: -50 }}
+                            initial={{ opacity: 0, x: -100 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
@@ -66,7 +66,7 @@ const HeroSection = () => {
                             </div>
                         </motion.div>
 
-                        {/* Right Image */}
+                        {/* =======================Right Image================================== */}
                         <div className="relative">
                             <img
                                 src="/hero-image.png"

@@ -12,7 +12,7 @@ return (
     <div className='py-5'>
       <div className='flex w-11/12 mx-auto items-center justify-between'>
         <div className="navbar-first">
-          <h1 className='text-2xl font-bold'>Hirehox</h1>
+          <NavLink to="/"><h1 className='text-2xl font-bold'>Hirehox</h1></NavLink>
         </div>
         <div className="navbar-middle">
           <ul className='flex gap-8 font-semibold'>
