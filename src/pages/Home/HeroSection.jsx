@@ -1,8 +1,10 @@
 import React from 'react';
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
     return (
         <div>
+
             <section
                 className="
         relative
@@ -11,10 +13,16 @@ const HeroSection = () => {
       "
             >
                 <div className="w-11/12 mx-auto">
+
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
 
                         {/* Left Content */}
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.7 }}
+                        >
                             <span className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
                                 #1 AI-Powered Job Platform
                             </span>
@@ -56,7 +64,7 @@ const HeroSection = () => {
                                     <p className="text-slate-500">Candidates</p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Right Image */}
                         <div className="relative">
