@@ -61,9 +61,9 @@ const Navbar = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden lg:flex items-center gap-3">
-          <Button variant="outline">Login</Button>
+          <Button className="cursor-pointer" variant="outline">Login</Button>
 
-          <Button>Sign Up</Button>
+          <NavLink to="/register"><Button className="cursor-pointer">Sign Up</Button></NavLink>
         </div>
 
         {/* Mobile Button */}
@@ -122,7 +122,7 @@ const Navbar = () => {
             <div className="flex flex-col gap-3 p-6">
               <Button variant="outline">Login</Button>
 
-              <Button>Sign Up</Button>
+              <NavLink className="w-full" to="/register"><Button>Sign Up</Button></NavLink>
             </div>
           </ul>
         </div>

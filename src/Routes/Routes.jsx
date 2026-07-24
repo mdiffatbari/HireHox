@@ -3,6 +3,7 @@ import Contact from '@/pages/Contact/Contact';
 import Errorpage from '@/pages/Errorpage/Errorpage';
 import FindJobs from '@/pages/FindJobs/FindJobs';
 import Home from '@/pages/Home/Home';
+import Register from '@/pages/Register/Register';
 import Root from '@/pages/Root/Root';
 import React from 'react';
 import { createBrowserRouter } from "react-router";
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: "/contact",
         Component: Contact
+      },
+      {
+        path: "register",
+        Component: Register
       }
     ]
   },
