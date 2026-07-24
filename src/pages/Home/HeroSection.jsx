@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
@@ -23,8 +23,8 @@ const HeroSection = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
                         >
-                            <span className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-                                #1 AI-Powered Job Platform
+                            <span className="inline-flex items-center rounded-full bg-blue-100 px-2 py-2 text-sm font-medium text-blue-700">
+                                AI-Powered Job Platform
                             </span>
 
                             <h1 className="mt-6 text-5xl lg:text-7xl font-bold leading-tight text-slate-900">
