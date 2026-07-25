@@ -61,8 +61,7 @@ const Navbar = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden lg:flex items-center gap-3">
-          <Button className="cursor-pointer" variant="outline">Login</Button>
-
+          <NavLink to="/login"><Button className="cursor-pointer" variant="outline">Login</Button></NavLink>
           <NavLink to="/register"><Button className="cursor-pointer">Sign Up</Button></NavLink>
         </div>
 
@@ -120,8 +119,7 @@ const Navbar = () => {
             </li>
 
             <div className="flex flex-col gap-3 p-6">
-              <Button variant="outline">Login</Button>
-
+              <NavLink to="/login"><Button className="cursor-pointer" variant="outline">Login</Button></NavLink>
               <NavLink className="w-full" to="/register"><Button>Sign Up</Button></NavLink>
             </div>
           </ul>

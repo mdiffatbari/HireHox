@@ -1,17 +1,47 @@
 // import React from "react";
+import { AuthContext } from "@/contexts/AuthContext";
 import rImage from "../../assets/auth-image.jpg"
+import { motion } from "framer-motion";
 import {
   FaGoogle,
   FaGithub,
   FaArrowRight,
 } from "react-icons/fa";
+import { use } from "react";
 
 const Register = () => {
+
+  const {createUserWithGoogle, createUser} = use(AuthContext);
+
+  const handleGoogleSignIn = () => {
+    createUserWithGoogle();
+  }
+
+  const handleCreateUser = (e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    createUser(email, password)
+    .then(result => {
+      console.log(result)
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
   return (
     <div className="flex items-center justify-center pt-20">
       <div className="w-full bg-gray-100 overflow-hidden grid lg:grid-cols-2">
         {/* Left Side */}
-        <div className="relative hidden  lg:block">
+        <motion.div className="relative hidden  lg:block"
+
+          initial={{ opacity: 0, x: -80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <img
             src={rImage}
             alt="Team"
@@ -19,7 +49,7 @@ const Register = () => {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 from-black/80 via-black/20 to-black/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent rounded-r-4xl"></div>
 
           <div className="absolute bottom-10 left-10 text-white max-w-md">
             <h2 className="text-4xl font-bold leading-tight mb-5">
@@ -32,10 +62,14 @@ const Register = () => {
               Whether you're hiring or job hunting, HireHox makes finding the perfect match faster and easier.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Side */}
-        <div className="flex items-center justify-center px-6 py-14 sm:px-10">
+        <motion.div className="flex items-center justify-center px-6 py-14 sm:px-10"
+          initial={{ opacity: 0, x: 80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        >
           <div className="w-full max-w-md">
             <div className="text-center mb-10">
               <h1 className="text-4xl font-bold text-slate-900">
@@ -47,7 +81,7 @@ const Register = () => {
               </p>
             </div>
 
-            <form className="space-y-5">
+            <form onSubmit={handleCreateUser} className="space-y-5">
               {/* Name */}
               <div>
                 <label className="text-sm text-slate-600 mb-2 block">
@@ -69,6 +103,7 @@ const Register = () => {
 
                 <input
                   type="email"
+                  name="email"
                   placeholder="john@example.com"
                   className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#155dfc] focus:ring-4 focus:ring-blue-100 transition"
                 />
@@ -82,6 +117,7 @@ const Register = () => {
 
                 <input
                   type="password"
+                  name="password"
                   placeholder="••••••••"
                   className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#155dfc] focus:ring-4 focus:ring-blue-100 transition"
                 />
@@ -106,7 +142,7 @@ const Register = () => {
 
             {/* Social Buttons */}
             <div className="space-y-4">
-              <button className="w-full flex items-center justify-center gap-3 border border-slate-300 rounded-xl py-3 hover:bg-slate-50 transition font-medium">
+              <button onClick={handleGoogleSignIn} className="w-full flex items-center justify-center gap-3 border cursor-pointer border-slate-300 rounded-xl py-3 hover:bg-slate-50 transition font-medium">
                 <FaGoogle className="text-red-500" />
                 Continue with Google
               </button>
@@ -128,7 +164,7 @@ const Register = () => {
               </a>
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

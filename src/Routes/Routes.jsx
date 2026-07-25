@@ -3,6 +3,7 @@ import Contact from '@/pages/Contact/Contact';
 import Errorpage from '@/pages/Errorpage/Errorpage';
 import FindJobs from '@/pages/FindJobs/FindJobs';
 import Home from '@/pages/Home/Home';
+import LogIn from '@/pages/LogIn/LogIn';
 import Register from '@/pages/Register/Register';
 import Root from '@/pages/Root/Root';
 import React from 'react';
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: "register",
         Component: Register
+      },
+      {
+        path: "/login",
+        Component: LogIn
       }
     ]
   },
