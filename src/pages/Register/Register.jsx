@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import rImage from "../../assets/auth-image.jpg"
 import {
   FaGoogle,
   FaGithub,
@@ -10,26 +11,25 @@ const Register = () => {
     <div className="flex items-center justify-center pt-20">
       <div className="w-full bg-gray-100 overflow-hidden grid lg:grid-cols-2">
         {/* Left Side */}
-        <div className="relative hidden lg:block">
+        <div className="relative hidden  lg:block">
           <img
-            src="https://images.pexels.com/photos/4049210/pexels-photo-4049210.jpeg"
+            src={rImage}
             alt="Team"
-            className="w-full h-full object-cover"
+            className="w-full  object-cover rounded-r-4xl"
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/20"></div>
+          <div className="absolute inset-0 from-black/80 via-black/20 to-black/20"></div>
 
           <div className="absolute bottom-10 left-10 text-white max-w-md">
             <h2 className="text-4xl font-bold leading-tight mb-5">
-              Build amazing
+              Connect Talent
               <br />
-              projects together.
+              With Opportunity.
             </h2>
 
             <p className="text-white/80 text-lg">
-              Create your account and start building modern web applications
-              with confidence.
+              Whether you're hiring or job hunting, HireHox makes finding the perfect match faster and easier.
             </p>
           </div>
         </div>
