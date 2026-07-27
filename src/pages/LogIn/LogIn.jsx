@@ -11,10 +11,26 @@ import { use } from "react";
 
 const LogIn = () => {
 
-    const {createUserWithGoogle} = use(AuthContext);
+    const {createUserWithGoogle, logInUser} = use(AuthContext);
 
     const handleLogInWithGoogle = () => {
         createUserWithGoogle()
+    }
+
+    const createUserWithPassword = (e) => {
+        e.preventDefault();
+
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+        logInUser(email, password)
+        .then(result => {
+            console.log(result)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+        
     }
 
     return (
@@ -68,7 +84,7 @@ const LogIn = () => {
                             </p>
                         </div>
 
-                        <form className="space-y-5">
+                        <form onSubmit={createUserWithPassword} className="space-y-5">
                             {/* Email */}
                             <div>
                                 <label className="text-sm text-slate-600 mb-2 block">
@@ -77,6 +93,7 @@ const LogIn = () => {
 
                                 <input
                                     type="email"
+                                    name="email"
                                     placeholder="john@example.com"
                                     className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#155dfc] focus:ring-4 focus:ring-blue-100 transition"
                                 />
@@ -99,6 +116,7 @@ const LogIn = () => {
 
                                 <input
                                     type="password"
+                                    name="password"
                                     placeholder="••••••••"
                                     className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#155dfc] focus:ring-4 focus:ring-blue-100 transition"
                                 />
