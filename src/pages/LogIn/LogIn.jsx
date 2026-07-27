@@ -6,8 +6,17 @@ import {
     FaGithub,
     FaArrowRight,
 } from "react-icons/fa";
+import { AuthContext } from "@/contexts/AuthContext";
+import { use } from "react";
 
 const LogIn = () => {
+
+    const {createUserWithGoogle} = use(AuthContext);
+
+    const handleLogInWithGoogle = () => {
+        createUserWithGoogle()
+    }
+
     return (
         <div className="flex items-center justify-center pt-20">
             <div className="w-full bg-gray-100 overflow-hidden grid lg:grid-cols-2">
@@ -98,7 +107,7 @@ const LogIn = () => {
                             {/* Login Button */}
                             <button
                                 type="submit"
-                                className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#155dfc] py-3 font-semibold text-white hover:bg-blue-700 transition"
+                                className="w-full flex items-center justify-center cursor-pointer gap-2 rounded-xl bg-[#155dfc] py-3 font-semibold text-white hover:bg-blue-700 transition"
                             >
                                 Log In
                                 <FaArrowRight size={14} />
@@ -114,12 +123,12 @@ const LogIn = () => {
 
                         {/* Social Login */}
                         <div className="space-y-4">
-                            <button className="w-full flex items-center justify-center gap-3 border border-slate-300 rounded-xl py-3 hover:bg-slate-50 transition font-medium">
+                            <button onClick={handleLogInWithGoogle} className="w-full flex items-center justify-center cursor-pointer gap-3 border border-slate-300 rounded-xl py-3 hover:bg-slate-50 transition font-medium">
                                 <FaGoogle className="text-red-500" />
                                 Continue with Google
                             </button>
 
-                            <button className="w-full flex items-center justify-center gap-3 border border-slate-300 rounded-xl py-3 hover:bg-slate-50 transition font-medium">
+                            <button className="w-full flex items-center justify-center cursor-pointer gap-3 border border-slate-300 rounded-xl py-3 hover:bg-slate-50 transition font-medium">
                                 <FaGithub />
                                 Continue with GitHub
                             </button>
