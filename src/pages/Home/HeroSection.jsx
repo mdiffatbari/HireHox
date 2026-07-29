@@ -1,20 +1,21 @@
 // import React from 'react';
 import { motion } from "framer-motion";
+import heroBg from "../../assets/hero.json"
+import heroBg2 from "../../assets/hero2.json"
+import Lottie from "lottie-react";
 
 const HeroSection = () => {
+    console.log(heroBg);
     return (
         <div>
 
             <section
-                className="
-        relative
-        py-32
-        bg-[radial-gradient(circle_at_10%_20%,rgba(59,130,246,0.12)_0%,rgba(59,130,246,0)_45%),linear-gradient(135deg,#f0f9ff_0%,#f0fff4_45%,#ffffff_100%)]
+                className="relative py-32 md:py-14 bg-[radial-gradient(circle_at_10%_20%,rgba(59,130,246,0.12)_0%,rgba(59,130,246,0)_45%),linear-gradient(135deg,#f0f9ff_0%,#f0fff4_45%,#ffffff_100%)]
       "
             >
                 <div className="w-11/12 mx-auto">
 
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="grid lg:grid-cols-2 gap-3 items-center">
 
                         {/* =======================Left Texts================================= */}
                         <motion.div
@@ -27,10 +28,12 @@ const HeroSection = () => {
                                 AI-Powered Job Platform
                             </span>
 
-                            <h1 className="mt-6 text-5xl lg:text-7xl font-bold leading-tight text-slate-900">
+                            <h1 className="mt-6 text-5xl lg:text-8xl font-extrabold leading-tight text-slate-900">
                                 Find Your Next
+                                
                                 <span className="text-blue-600"> Career Move </span>
-                                With Confidence
+                                
+                                With HireHox
                             </h1>
 
                             <p className="mt-6 max-w-xl text-lg text-slate-600">
@@ -67,23 +70,12 @@ const HeroSection = () => {
                         </motion.div>
 
                         {/* =======================Right Image================================== */}
-                        <div className="relative">
-                            <img
-                                src="/hero-image.png"
-                                alt="Career opportunities"
-                                className="w-full rounded-3xl"
-                            />
 
-                            <div className="absolute -left-4 bottom-10 rounded-2xl bg-white p-4 shadow-xl">
-                                <h4 className="text-xl font-bold">250+</h4>
-                                <p className="text-sm text-slate-500">New Jobs Today</p>
-                            </div>
 
-                            <div className="absolute -right-4 top-10 rounded-2xl bg-white p-4 shadow-xl">
-                                <h4 className="text-xl font-bold">95%</h4>
-                                <p className="text-sm text-slate-500">Hiring Success</p>
-                            </div>
+                        <div className="">
+                            <Lottie.default animationData={heroBg2} />
                         </div>
+
 
                     </div>
                 </div>

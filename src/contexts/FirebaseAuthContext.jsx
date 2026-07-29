@@ -12,18 +12,22 @@ const FirebaseAuthContext = ({children}) => {
     const provider = new GoogleAuthProvider();
 
     const createUserWithGoogle = () => {
+        setLoading(true);
         return signInWithPopup(auth,provider)
     }
 
     const createUser = (email, password) =>{
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const logInUser = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const signOutUser = () => {
+        setLoading(true);
         return signOut(auth);
     }
 
