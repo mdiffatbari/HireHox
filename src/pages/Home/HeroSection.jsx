@@ -28,7 +28,7 @@ const HeroSection = () => {
                                 AI-Powered Job Platform
                             </span>
 
-                            <h1 className="mt-6 text-5xl lg:text-8xl font-bold leading-tight text-slate-900 g-font">
+                            <h1 className="mt-6 text-5xl lg:text-8xl font-bold leading-tight text-slate-900">
                                 Find Your Next
                                 
                                 <span className="text-blue-600"> Career Move </span>
