@@ -40,6 +40,7 @@ const FirebaseAuthProvider = ({children}) => {
             else{
                 setUser(null)
             }
+            setLoading(false)
         })
         return () => {
             userStatus();
