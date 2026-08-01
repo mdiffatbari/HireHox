@@ -51,7 +51,8 @@ const FirebaseAuthProvider = ({children}) => {
         createUserWithGoogle,
         createUser,
         logInUser ,
-        signOutUser
+        signOutUser,
+        loading
     }
     return (
         <AuthContext value={userInfo}>

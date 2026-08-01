@@ -8,6 +8,7 @@ import Register from '@/pages/Register/Register';
 import Root from '@/pages/Root/Root';
 import React from 'react';
 import { createBrowserRouter } from "react-router";
+import PrivateRoutes from './PrivateRoutes';
 
 export const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        Component: Contact
+        element:<PrivateRoutes><Contact></Contact></PrivateRoutes>
       },
       {
         path: "register",
