@@ -1,6 +1,6 @@
 import lImage from "../../assets/login-image.jpg";
 import { motion } from "framer-motion";
-import { Link, useNavigate} from "react-router";
+import { Link, useLocation, useNavigate} from "react-router";
 import {
     FaGoogle,
     FaGithub,
@@ -12,6 +12,7 @@ import { use } from "react";
 const LogIn = () => {
 
     const navigate =  useNavigate();
+    const location = useLocation();
 
     const {createUserWithGoogle, logInUser} = use(AuthContext);
 
@@ -19,7 +20,7 @@ const LogIn = () => {
         createUserWithGoogle()
         .then(result => {
             console.log(result);
-            navigate("/")
+            navigate(location?.state || "/")
         })
         .catch(error => {
             console.log(error)
@@ -35,7 +36,7 @@ const LogIn = () => {
         logInUser(email, password)
         .then(result => {
             console.log(result);
-            navigate("/")
+            navigate(location?.state || "/")
         })
         .catch(error => {
             console.log(error)
