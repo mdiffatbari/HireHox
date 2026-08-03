@@ -1,7 +1,7 @@
 // import React from 'react';
 import { motion } from "framer-motion";
 import heroBg from "../../assets/hero.json"
-import heroBg2 from "../../assets/hero2.json"
+import heroBg2 from "../../assets/hero3.json"
 import Lottie from "lottie-react";
 
 const HeroSection = () => {
@@ -10,10 +10,10 @@ const HeroSection = () => {
         <div>
 
             <section
-                className="relative py-32 md:py-14 bg-[radial-gradient(circle_at_10%_20%,rgba(59,130,246,0.12)_0%,rgba(59,130,246,0)_45%),linear-gradient(135deg,#f0f9ff_0%,#f0fff4_45%,#ffffff_100%)]
+                className="relative py-32 md:py-14 
       "
             >
-                <div className="w-11/12 mx-auto">
+                <div className="w-10/12 md:py-20 flex justify-center items-center mx-auto">
 
                     <div className="grid lg:grid-cols-2 gap-3 items-center">
 
@@ -28,7 +28,7 @@ const HeroSection = () => {
                                 AI-Powered Job Platform
                             </span>
 
-                            <h1 className="mt-6 text-5xl lg:text-8xl font-bold leading-tight text-slate-900">
+                            <h1 className="mt-6 text-5xl lg:text-7xl font-bold leading-tight text-slate-900">
                                 Find Your Next
                                 
                                 <span className="text-blue-600"> Career Move </span>

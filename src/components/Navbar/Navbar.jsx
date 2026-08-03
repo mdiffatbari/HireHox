@@ -2,8 +2,8 @@ import { use, useEffect, useState, useRef } from "react";
 import { Button } from "../ui/button";
 import { NavLink, useNavigate } from "react-router";
 import { Menu, X, ChevronDown, LayoutDashboard, LogOut } from "lucide-react";
-import "./navbar.css";
 import { AuthContext } from "@/contexts/AuthContext";
+import "./navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,7 +52,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="w-11/12 mx-auto h-20 flex items-center justify-between">
+      <div className="w-10/12 mx-auto h-20 flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/">
           <h1 className="text-2xl font-bold">HireHox</h1>

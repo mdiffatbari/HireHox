@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element:<PrivateRoutes><Contact></Contact></PrivateRoutes>
+        Component: Contact
       },
       {
         path: "register",
