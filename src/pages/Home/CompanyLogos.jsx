@@ -9,11 +9,11 @@ import wallmartLogo from "../../assets/company Logo/wallmart.svg"
 const CompanyLogos = () => {
     return (
         <div>
-            <div className="pb-6 w-11/12 mx-auto">
+            <div className="pb-6 w-10/12 mx-auto">
             <Marquee.default
                 speed={50}
                 gradient={true}
-                gradientWidth={600}
+                gradientWidth={200}
             >
                 
                 <img className="mx-10" src={googLogo} alt="" />
