@@ -13,7 +13,7 @@ const Cta = () => {
             duration: 0.9,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 px-8 py-16 md:px-16 md:py-20"
+          className="relative overflow-hidden rounded-[40px] bg-[#155dfc] px-8 py-16 md:px-16 md:py-20"
         >
           {/* Background Decorations */}
 
