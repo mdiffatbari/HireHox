@@ -3,6 +3,7 @@ import CompanyLogos from './CompanyLogos';
 import Category from './Category';
 import Choose from './Choose';
 import Cta from './Cta';
+import NewsLatter from './NewsLatter';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Category></Category>
             <Choose></Choose>
             <Cta></Cta>
+            <NewsLatter></NewsLatter>
         </div>
     );
 };
