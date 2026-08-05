@@ -57,7 +57,7 @@ const Faq = () => {
               value="item-1"
               className="rounded-2xl px-6"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold">
+              <AccordionTrigger className="text-left text-lg">
                 Is HireHox free for job seekers?
               </AccordionTrigger>
               <AccordionContent className="text-slate-500 leading-7">
@@ -70,7 +70,7 @@ const Faq = () => {
               value="item-2"
               className="rounded-2xl px-6"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold">
+              <AccordionTrigger className="text-left text-lg">
                 How do I apply for a job?
               </AccordionTrigger>
               <AccordionContent className="text-slate-500 leading-7">
@@ -84,7 +84,7 @@ const Faq = () => {
               value="item-3"
               className="rounded-2xl px-6"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold">
+              <AccordionTrigger className="text-left text-lg">
                 Are employers verified?
               </AccordionTrigger>
               <AccordionContent className="text-slate-500 leading-7">
@@ -97,7 +97,7 @@ const Faq = () => {
               value="item-4"
               className="rounded-2xl px-6"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold">
+              <AccordionTrigger className="text-left text-lg">
                 Can companies post unlimited jobs?
               </AccordionTrigger>
               <AccordionContent className="text-slate-500 leading-7">
@@ -111,7 +111,7 @@ const Faq = () => {
               value="item-5"
               className="rounded-2xl px-6"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold">
+              <AccordionTrigger className="text-left text-lg">
                 How does AI-powered job matching work?
               </AccordionTrigger>
               <AccordionContent className="text-slate-500 leading-7">
@@ -125,7 +125,7 @@ const Faq = () => {
               value="item-6"
               className="rounded-2xl px-6"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold">
+              <AccordionTrigger className="text-left text-lg">
                 Can I update my profile after creating an account?
               </AccordionTrigger>
               <AccordionContent className="text-slate-500 leading-7">
