@@ -4,6 +4,7 @@ import Category from './Category';
 import Choose from './Choose';
 import Cta from './Cta';
 import NewsLatter from './NewsLatter';
+import Faq from './Faq';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Category></Category>
             <Choose></Choose>
             <Cta></Cta>
+            <Faq></Faq>
             <NewsLatter></NewsLatter>
         </div>
     );
