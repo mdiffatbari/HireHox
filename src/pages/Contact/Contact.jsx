@@ -6,7 +6,7 @@ import {
     FaPaperPlane,
 } from "react-icons/fa";
 
-import contactJpg from "../../assets/contact.jpg"
+import contactJpg from "../../assets/background.jpg"
 
 const Contact = () => {
     return (
@@ -25,9 +25,6 @@ const Contact = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
 
-                {/* Overlay */}
-
-                <div className="absolute inset-0 bg-[#155dfc]/90"></div>
 
                 {/* Content */}
 
@@ -41,16 +38,6 @@ const Contact = () => {
                     >
                         Contact Us
                     </motion.h1>
-
-                    <motion.p
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.35 }}
-                        className="mt-6 max-w-2xl text-lg md:text-xl leading-8 text-blue-100"
-                    >
-                        We'd love to hear from you. Whether you have a question,
-                        feedback, or need support, our team is always ready to help.
-                    </motion.p>
 
                 </div>
             </motion.div>
