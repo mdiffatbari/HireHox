@@ -5,16 +5,14 @@ import FindJobs from '@/pages/FindJobs/FindJobs';
 import Home from '@/pages/Home/Home';
 import LogIn from '@/pages/LogIn/LogIn';
 import Register from '@/pages/Register/Register';
-import Root from '@/pages/Root/Root';
-import React from 'react';
+import MainLayout from '@/pages/Layouts/MainLayout';
 import { createBrowserRouter } from "react-router";
-import PrivateRoutes from './PrivateRoutes';
 
 export const router = createBrowserRouter([
   {
     path: "/",
     errorElement: <Errorpage></Errorpage>,
-    Component: Root,
+    Component: MainLayout,
     children: [
       {
         index: true,
