@@ -7,6 +7,7 @@ import LogIn from '@/pages/LogIn/LogIn';
 import Register from '@/pages/Register/Register';
 import MainLayout from '@/pages/Layouts/MainLayout';
 import { createBrowserRouter } from "react-router";
+import DashboardLayout from '@/pages/Layouts/DashboardLayout';
 
 export const router = createBrowserRouter([
   {
@@ -41,4 +42,14 @@ export const router = createBrowserRouter([
       }
     ]
   },
+  //dashboard routes
+  {
+    path:"/dashboard",
+    Component: DashboardLayout,
+    children: [
+      {
+        
+      }
+    ]
+  }
 ]);
