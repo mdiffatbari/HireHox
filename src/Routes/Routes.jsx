@@ -9,6 +9,7 @@ import MainLayout from '@/pages/Layouts/MainLayout';
 import { createBrowserRouter } from "react-router";
 import DashboardLayout from '@/pages/Layouts/DashboardLayout';
 import Dashboard from '@/pages/Dashboard/Dashboard';
+import Profile from '@/pages/Dashboard/Candidate/Profile';
 
 export const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
         path:"/dashboard",
         Component: Dashboard
       },
+      {
+        path: "/dashboard/profile",
+        Component: Profile
+      }
     ]
   }
 ]);

@@ -36,7 +36,7 @@ const candidateMenu = [
   },
   {
     name: "My Profile",
-    path: "/dashboard/candidate/profile",
+    path: "/dashboard/profile",
     icon: <FaUser />,
   },
 ];
