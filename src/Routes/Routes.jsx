@@ -10,6 +10,7 @@ import { createBrowserRouter } from "react-router";
 import DashboardLayout from '@/pages/Layouts/DashboardLayout';
 import Dashboard from '@/pages/Dashboard/Dashboard';
 import Profile from '@/pages/Dashboard/Candidate/Profile';
+import SavedJob from '@/pages/Dashboard/Candidate/SavedJob';
 
 export const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/profile",
         Component: Profile
+      },
+      {
+        path: "/dashboard/savedjobs",
+        Component: SavedJob
       }
     ]
   }

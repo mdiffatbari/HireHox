@@ -26,7 +26,7 @@ const candidateMenu = [
   },
   {
     name: "Saved Jobs",
-    path: "/dashboard/candidate/savedJobs",
+    path: "/dashboard/savedjobs",
     icon: <FaBookmark />,
   },
   {
