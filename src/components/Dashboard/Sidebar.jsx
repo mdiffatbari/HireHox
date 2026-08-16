@@ -72,7 +72,7 @@ const employerMenu = [
 const Sidebar = ({ isOpen, setIsOpen }) => {
   return (
     <>
-      {/* Mobile Overlay */}
+      {/* ================= MOBILE OVERLAY ================= */}
 
       {isOpen && (
         <div
@@ -81,7 +81,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         />
       )}
 
-      {/* Sidebar */}
+      {/* ================= SIDEBAR ================= */}
 
       <aside
         className={`
@@ -97,6 +97,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           transition-transform
           duration-300
           ease-in-out
+
           ${
             isOpen
               ? "translate-x-0"
@@ -105,7 +106,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         `}
       >
 
-        {/* Logo */}
+        {/* ================= LOGO ================= */}
 
         <div className="h-20 px-6 flex items-center justify-between border-b border-slate-100">
 
@@ -119,7 +120,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             </p>
           </div>
 
-          {/* Mobile Close */}
+          {/* Mobile Close Button */}
 
           <button
             onClick={() => setIsOpen(false)}
@@ -129,7 +130,9 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               rounded-lg
               bg-slate-100
               text-slate-500
-              flex items-center justify-center
+              flex
+              items-center
+              justify-center
               hover:bg-slate-200
               transition
             "
@@ -139,13 +142,21 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
         </div>
 
-        {/* Navigation */}
+        {/* ================= NAVIGATION ================= */}
 
         <nav className="flex-1 px-4 py-6 overflow-y-auto">
 
-          {/* Candidate */}
+          {/* ================= CANDIDATE ================= */}
 
-          <p className="px-3 mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+          <p className="
+            px-3
+            mb-3
+            text-xs
+            font-semibold
+            uppercase
+            tracking-wider
+            text-slate-400
+          ">
             Candidate
           </p>
 
@@ -155,14 +166,19 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               <NavLink
                 key={item.name}
                 to={item.path}
+                end={item.path === "/dashboard"}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   `
-                  flex items-center gap-4
-                  px-4 py-3.5
+                  flex
+                  items-center
+                  gap-4
+                  px-4
+                  py-3.5
                   rounded-xl
                   font-medium
-                  transition-all duration-200
+                  transition-all
+                  duration-200
 
                   ${
                     isActive
@@ -184,9 +200,18 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
           </div>
 
-          {/* Employer */}
+          {/* ================= EMPLOYER ================= */}
 
-          <p className="px-3 mt-8 mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+          <p className="
+            px-3
+            mt-8
+            mb-3
+            text-xs
+            font-semibold
+            uppercase
+            tracking-wider
+            text-slate-400
+          ">
             Employer
           </p>
 
@@ -196,14 +221,19 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               <NavLink
                 key={item.name}
                 to={item.path}
+                end={item.path === "/dashboard/employerDashboard"}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   `
-                  flex items-center gap-4
-                  px-4 py-3.5
+                  flex
+                  items-center
+                  gap-4
+                  px-4
+                  py-3.5
                   rounded-xl
                   font-medium
-                  transition-all duration-200
+                  transition-all
+                  duration-200
 
                   ${
                     isActive
@@ -225,22 +255,36 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
           </div>
 
-          {/* Account */}
+          {/* ================= ACCOUNT ================= */}
 
-          <p className="px-3 mt-8 mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
+          <p className="
+            px-3
+            mt-8
+            mb-3
+            text-xs
+            font-semibold
+            uppercase
+            tracking-wider
+            text-slate-400
+          ">
             Account
           </p>
 
           <NavLink
             to="/dashboard/settings"
+            end
             onClick={() => setIsOpen(false)}
             className={({ isActive }) =>
               `
-              flex items-center gap-4
-              px-4 py-3.5
+              flex
+              items-center
+              gap-4
+              px-4
+              py-3.5
               rounded-xl
               font-medium
-              transition-all duration-200
+              transition-all
+              duration-200
 
               ${
                 isActive
@@ -259,27 +303,54 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
         </nav>
 
-        {/* User Card */}
+        {/* ================= USER CARD ================= */}
 
         <div className="p-4 border-t border-slate-100">
 
-          <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50">
+          <div className="
+            flex
+            items-center
+            gap-3
+            p-3
+            rounded-xl
+            bg-slate-50
+          ">
 
             {/* Avatar */}
 
-            <div className="w-11 h-11 shrink-0 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+            <div className="
+              w-11
+              h-11
+              shrink-0
+              rounded-full
+              bg-blue-100
+              text-blue-600
+              flex
+              items-center
+              justify-center
+              font-bold
+            ">
               IB
             </div>
 
-            {/* User Info */}
+            {/* User Information */}
 
             <div className="flex-1 min-w-0">
 
-              <h3 className="font-semibold text-sm text-slate-800 truncate">
+              <h3 className="
+                font-semibold
+                text-sm
+                text-slate-800
+                truncate
+              ">
                 Iffat Bari
               </h3>
 
-              <p className="text-xs text-slate-400 truncate">
+              <p className="
+                text-xs
+                text-slate-400
+                truncate
+              ">
                 User
               </p>
 
@@ -290,13 +361,17 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             <button
               title="Logout"
               className="
-                w-9 h-9
+                w-9
+                h-9
+                shrink-0
                 rounded-lg
                 text-slate-400
                 hover:bg-red-50
                 hover:text-red-500
                 transition
-                flex items-center justify-center
+                flex
+                items-center
+                justify-center
               "
             >
               <FaSignOutAlt />
