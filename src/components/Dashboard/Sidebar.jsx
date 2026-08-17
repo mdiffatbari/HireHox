@@ -111,9 +111,11 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         <div className="h-20 px-6 flex items-center justify-between border-b border-slate-100">
 
           <div>
-            <h1 className="text-2xl font-bold text-blue-600">
+            <NavLink to="/">
+              <h1 className="text-2xl font-bold text-blue-600">
               HireHox
             </h1>
+            </NavLink>
 
             <p className="text-xs text-slate-400 mt-1">
               Dashboard
