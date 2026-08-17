@@ -31,7 +31,7 @@ const candidateMenu = [
   },
   {
     name: "My Applications",
-    path: "/dashboard/candidate/applications",
+    path: "/dashboard/myapplications",
     icon: <FaFileAlt />,
   },
   {
