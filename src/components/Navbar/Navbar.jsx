@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { NavLink, useNavigate } from "react-router";
 import { Menu, X, ChevronDown, LayoutDashboard, LogOut } from "lucide-react";
 import { AuthContext } from "@/contexts/AuthContext";
+import logo from "../../assets/logo.png"
 import "./navbar.css";
 
 const Navbar = () => {
@@ -55,7 +56,8 @@ const Navbar = () => {
       <div className="w-10/12 mx-auto h-20 flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/">
-          <h1 className="text-2xl font-bold">HireHox</h1>
+          {/* <h1 className="text-2xl font-bold">HireHox</h1> */}
+          <img src={logo} alt="" />
         </NavLink>
 
         {/* Desktop Menu */}

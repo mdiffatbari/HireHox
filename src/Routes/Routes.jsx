@@ -12,6 +12,7 @@ import Dashboard from '@/pages/Dashboard/Dashboard';
 import Profile from '@/pages/Dashboard/Candidate/Profile';
 import SavedJob from '@/pages/Dashboard/Candidate/SavedJob';
 import MyApplications from '@/pages/Dashboard/Candidate/MyApplications';
+import PostJobs from '@/pages/Dashboard/Employer/PostJobs/PostJobs';
 
 export const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/myapplications",
         Component: MyApplications
+      },
+      {
+        path: "/dashboard/postjobs",
+        Component: PostJobs
       }
     ]
   }

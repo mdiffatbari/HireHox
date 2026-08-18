@@ -49,7 +49,7 @@ const employerMenu = [
   },
   {
     name: "Post a Job",
-    path: "/dashboard/employer/postJob",
+    path: "/dashboard/postjobs",
     icon: <FaPlus />,
   },
   {
