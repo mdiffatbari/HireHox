@@ -59,7 +59,7 @@ const employerMenu = [
   },
   {
     name: "Applicants",
-    path: "/dashboard/employer/applicants",
+    path: "/dashboard/applicants",
     icon: <FaUsers />,
   },
   {
