@@ -54,7 +54,7 @@ const employerMenu = [
   },
   {
     name: "Manage Jobs",
-    path: "/dashboard/employer/manageJobs",
+    path: "/dashboard/managejobs",
     icon: <FaBriefcase />,
   },
   {
@@ -64,7 +64,7 @@ const employerMenu = [
   },
   {
     name: "Company Profile",
-    path: "/dashboard/employer/companyProfile",
+    path: "/dashboard/companyprofile",
     icon: <FaBuilding />,
   },
 ];

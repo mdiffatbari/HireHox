@@ -14,6 +14,7 @@ import SavedJob from '@/pages/Dashboard/Candidate/SavedJob';
 import MyApplications from '@/pages/Dashboard/Candidate/MyApplications';
 import PostJobs from '@/pages/Dashboard/Employer/PostJobs/PostJobs';
 import Applicants from '@/pages/Dashboard/Employer/Applicants/Applicants';
+import CompanyProfile from '@/pages/Dashboard/Employer/CompanyProfile/CompanyProfile';
 
 export const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/applicants",
         Component: Applicants
+      },
+      {
+        path: "/dashboard/companyprofile",
+        Component: CompanyProfile
       }
     ]
   }
