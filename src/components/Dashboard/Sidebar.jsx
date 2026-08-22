@@ -11,7 +11,11 @@ import {
   FaPlus,
   FaUsers,
   FaBuilding,
+  FaChartBar,
+  FaClipboardList,
 } from "react-icons/fa";
+
+// ================= CANDIDATE MENU =================
 
 const candidateMenu = [
   {
@@ -41,6 +45,8 @@ const candidateMenu = [
   },
 ];
 
+// ================= EMPLOYER MENU =================
+
 const employerMenu = [
   {
     name: "Employer Dashboard",
@@ -68,6 +74,54 @@ const employerMenu = [
     icon: <FaBuilding />,
   },
 ];
+
+// ================= ADMIN MENU =================
+
+const adminMenu = [
+  {
+    name: "Admin Dashboard",
+    path: "/dashboard/adminDashboard",
+    icon: <FaThLarge />,
+  },
+  {
+    name: "Manage Users",
+    path: "/dashboard/admin/users",
+    icon: <FaUsers />,
+  },
+  {
+    name: "Manage Jobs",
+    path: "/dashboard/admin/jobs",
+    icon: <FaBriefcase />,
+  },
+  {
+    name: "Manage Companies",
+    path: "/dashboard/admin/companies",
+    icon: <FaBuilding />,
+  },
+  {
+    name: "Manage Applicants",
+    path: "/dashboard/admin/applicants",
+    icon: <FaClipboardList />,
+  },
+  {
+    name: "Manage Blogs",
+    path: "/dashboard/admin/blogs",
+    icon: <FaFileAlt />,
+  },
+  {
+    name: "Post Blog",
+    path: "/dashboard/admin/postBlog",
+    icon: <FaPlus />,
+  },
+  {
+    name: "Reports",
+    path: "/dashboard/admin/reports",
+    icon: <FaChartBar />,
+  },
+];
+
+
+// ================= SIDEBAR =================
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
   return (
@@ -97,7 +151,6 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           transition-transform
           duration-300
           ease-in-out
-
           ${
             isOpen
               ? "translate-x-0"
@@ -108,13 +161,13 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
         {/* ================= LOGO ================= */}
 
-        <div className="h-20 px-6 flex items-center justify-between border-b border-slate-100">
+        <div className="h-20 px-6 flex items-center justify-between border-b border-slate-100 shrink-0">
 
           <div>
             <NavLink to="/">
               <h1 className="text-2xl font-bold text-blue-600">
-              HireHox
-            </h1>
+                HireHox
+              </h1>
             </NavLink>
 
             <p className="text-xs text-slate-400 mt-1">
@@ -144,21 +197,25 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
         </div>
 
+
         {/* ================= NAVIGATION ================= */}
 
         <nav className="flex-1 px-4 py-6 overflow-y-auto">
 
+
           {/* ================= CANDIDATE ================= */}
 
-          <p className="
-            px-3
-            mb-3
-            text-xs
-            font-semibold
-            uppercase
-            tracking-wider
-            text-slate-400
-          ">
+          <p
+            className="
+              px-3
+              mb-3
+              text-xs
+              font-semibold
+              uppercase
+              tracking-wider
+              text-slate-400
+            "
+          >
             Candidate
           </p>
 
@@ -190,7 +247,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                   `
                 }
               >
-                <span className="text-lg">
+                <span className="text-lg shrink-0">
                   {item.icon}
                 </span>
 
@@ -202,18 +259,21 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
           </div>
 
+
           {/* ================= EMPLOYER ================= */}
 
-          <p className="
-            px-3
-            mt-8
-            mb-3
-            text-xs
-            font-semibold
-            uppercase
-            tracking-wider
-            text-slate-400
-          ">
+          <p
+            className="
+              px-3
+              mt-8
+              mb-3
+              text-xs
+              font-semibold
+              uppercase
+              tracking-wider
+              text-slate-400
+            "
+          >
             Employer
           </p>
 
@@ -223,7 +283,9 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               <NavLink
                 key={item.name}
                 to={item.path}
-                end={item.path === "/dashboard/employerDashboard"}
+                end={
+                  item.path === "/dashboard/employerDashboard"
+                }
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   `
@@ -245,7 +307,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                   `
                 }
               >
-                <span className="text-lg">
+                <span className="text-lg shrink-0">
                   {item.icon}
                 </span>
 
@@ -257,18 +319,81 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
           </div>
 
+
+          {/* ================= ADMIN ================= */}
+
+          <p
+            className="
+              px-3
+              mt-8
+              mb-3
+              text-xs
+              font-semibold
+              uppercase
+              tracking-wider
+              text-slate-400
+            "
+          >
+            Administration
+          </p>
+
+          <div className="space-y-1">
+
+            {adminMenu.map((item) => (
+              <NavLink
+                key={item.name}
+                to={item.path}
+                end={
+                  item.path === "/dashboard/adminDashboard"
+                }
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  `
+                  flex
+                  items-center
+                  gap-4
+                  px-4
+                  py-3.5
+                  rounded-xl
+                  font-medium
+                  transition-all
+                  duration-200
+
+                  ${
+                    isActive
+                      ? "bg-blue-600 text-white shadow-md shadow-blue-200"
+                      : "text-slate-600 hover:bg-blue-50 hover:text-blue-600"
+                  }
+                  `
+                }
+              >
+                <span className="text-lg shrink-0">
+                  {item.icon}
+                </span>
+
+                <span>
+                  {item.name}
+                </span>
+              </NavLink>
+            ))}
+
+          </div>
+
+
           {/* ================= ACCOUNT ================= */}
 
-          <p className="
-            px-3
-            mt-8
-            mb-3
-            text-xs
-            font-semibold
-            uppercase
-            tracking-wider
-            text-slate-400
-          ">
+          <p
+            className="
+              px-3
+              mt-8
+              mb-3
+              text-xs
+              font-semibold
+              uppercase
+              tracking-wider
+              text-slate-400
+            "
+          >
             Account
           </p>
 
@@ -296,7 +421,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               `
             }
           >
-            <FaCog className="text-lg" />
+            <FaCog className="text-lg shrink-0" />
 
             <span>
               Settings
@@ -305,58 +430,69 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
         </nav>
 
+
         {/* ================= USER CARD ================= */}
 
-        <div className="p-4 border-t border-slate-100">
+        <div className="p-4 border-t border-slate-100 shrink-0">
 
-          <div className="
-            flex
-            items-center
-            gap-3
-            p-3
-            rounded-xl
-            bg-slate-50
-          ">
+          <div
+            className="
+              flex
+              items-center
+              gap-3
+              p-3
+              rounded-xl
+              bg-slate-50
+            "
+          >
 
             {/* Avatar */}
 
-            <div className="
-              w-11
-              h-11
-              shrink-0
-              rounded-full
-              bg-blue-100
-              text-blue-600
-              flex
-              items-center
-              justify-center
-              font-bold
-            ">
+            <div
+              className="
+                w-11
+                h-11
+                shrink-0
+                rounded-full
+                bg-blue-100
+                text-blue-600
+                flex
+                items-center
+                justify-center
+                font-bold
+              "
+            >
               IB
             </div>
+
 
             {/* User Information */}
 
             <div className="flex-1 min-w-0">
 
-              <h3 className="
-                font-semibold
-                text-sm
-                text-slate-800
-                truncate
-              ">
+              <h3
+                className="
+                  font-semibold
+                  text-sm
+                  text-slate-800
+                  truncate
+                "
+              >
                 Iffat Bari
               </h3>
 
-              <p className="
-                text-xs
-                text-slate-400
-                truncate
-              ">
+              <p
+                className="
+                  text-xs
+                  text-slate-400
+                  truncate
+                "
+              >
                 User
               </p>
 
             </div>
+
 
             {/* Logout */}
 
